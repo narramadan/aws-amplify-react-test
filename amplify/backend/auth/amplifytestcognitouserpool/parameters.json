@@ -1,0 +1,72 @@
+{
+    "identityPoolName": "amplifytestcognitouserpool_identitypool_c2fd18d5",
+    "allowUnauthenticatedIdentities": false,
+    "thirdPartyAuth": false,
+    "lambdaLogPolicy": "amplifytestcognitouserpool_lambda_log_policy",
+    "openIdLambdaRoleName": "amplifytestcognitouserpool_openid_lambda_role",
+    "openIdRolePolicy": "amplifytestcognitouserpool_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "amplifytestcognitouserpool_openid_lambda_iam_policy",
+    "openIdLogPolicy": "amplifytestcognitouserpool_openid_lambda_log_policy",
+    "userPoolName": "amplify_test_cognitouserpool",
+    "autoVerifiedAttributes": [
+        "phone_number"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "amplifytestcognitouserpool_sns-role",
+    "roleExternalId": "amplifytestcognitouserpool_role_external_id",
+    "policyName": "amplifytestcognitouserpool-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [
+        "Requires Lowercase",
+        "Requires Uppercase",
+        "Requires Numbers",
+        "Requires Symbols"
+    ],
+    "requiredAttributes": [
+        "email",
+        "phone_number"
+    ],
+    "userpoolClientName": "amplifytestcognitouserpool_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "amplifytestcognitouserpool_totp_lambda_role",
+    "mfaLambdaLogPolicy": "amplifytestcognitouserpool_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "amplifytestcognitouserpool_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "amplifytestcognitouserpool_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "amplifytestcognitouserpool_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "amplifytestcognitouserpool_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "amplifytestcognitouserpool_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "useDefault": "manual",
+    "authSelections": "identityPoolAndUserPool",
+    "resourceName": "amplifytestcognitouserpool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    }
+}

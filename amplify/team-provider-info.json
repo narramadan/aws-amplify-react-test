@@ -1,0 +1,36 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "aws-amplify-test-20190220035815-authRole",
+            "UnauthRoleArn": "arn:aws:iam::181723585575:role/aws-amplify-test-20190220035815-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::181723585575:role/aws-amplify-test-20190220035815-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "aws-amplify-test-20190220035815-deployment",
+            "UnauthRoleName": "aws-amplify-test-20190220035815-unauthRole",
+            "StackName": "aws-amplify-test-20190220035815",
+            "StackId": "arn:aws:cloudformation:us-east-1:181723585575:stack/aws-amplify-test-20190220035815/8d36b780-3467-11e9-92f3-0e07a69c7d52"
+        },
+        "categories": {
+            "auth": {
+                "amplifytestcognitouserpool": {}
+            }
+        }
+    },
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "aws-amplify-test-20190221234806-authRole",
+            "UnauthRoleArn": "arn:aws:iam::181723585575:role/aws-amplify-test-20190221234806-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::181723585575:role/aws-amplify-test-20190221234806-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "aws-amplify-test-20190221234806-deployment",
+            "UnauthRoleName": "aws-amplify-test-20190221234806-unauthRole",
+            "StackName": "aws-amplify-test-20190221234806",
+            "StackId": "arn:aws:cloudformation:us-east-1:181723585575:stack/aws-amplify-test-20190221234806/efea6460-35d6-11e9-9bc9-12a9adafee72"
+        },
+        "categories": {
+            "auth": {
+                "amplifytestcognitouserpool": {}
+            }
+        }
+    }
+}
