@@ -28,7 +28,15 @@ type Posts {
   nextToken: String
 }
 
+type Comments {
+  items: [Comment]
+  nextToken: String
+}
+
 type Query {
   # Fetch posts for a specific blog
   postsUnderBlog(blogId: ID!, limit: Int, nextToken: String): Posts
+
+  # Fetch comments for a specific post
+  commentsUnderPost(postId: ID!, limit: Int, nextToken: String): Comments
 }

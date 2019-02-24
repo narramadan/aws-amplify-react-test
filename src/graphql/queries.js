@@ -18,6 +18,20 @@ export const postsUnderBlog = `query PostsUnderBlog($blogId: ID!, $limit: Int, $
   }
 }
 `;
+export const commentsUnderPost = `query CommentsUnderPost($postId: ID!, $limit: Int, $nextToken: String) {
+  commentsUnderPost(postId: $postId, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      content
+      post {
+        id
+        title
+      }
+    }
+    nextToken
+  }
+}
+`;
 export const getBlog = `query GetBlog($id: ID!) {
   getBlog(id: $id) {
     id
