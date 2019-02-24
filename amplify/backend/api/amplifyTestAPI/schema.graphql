@@ -2,6 +2,7 @@ type Blog @model {
   id: ID!
   name: String!
   posts: [Post] @connection(name: "BlogPosts")
+  #category: Category!
 }
 type Post @model {
   id: ID!
@@ -13,4 +14,21 @@ type Comment @model {
   id: ID!
   content: String
   post: Post @connection(name: "PostComments")
+}
+
+#enum Category {
+#  Technology
+#  Science
+#  Politics
+#  Books
+#}
+
+type Posts {
+  items: [Post]
+  nextToken: String
+}
+
+type Query {
+  # Fetch posts for a specific blog
+  postsUnderBlog(blogId: ID!, limit: Int, nextToken: String): Posts
 }

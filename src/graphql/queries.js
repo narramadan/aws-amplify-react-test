@@ -1,6 +1,23 @@
 // eslint-disable
 // this is an auto generated file. This will be overwritten
 
+export const postsUnderBlog = `query PostsUnderBlog($blogId: ID!, $limit: Int, $nextToken: String) {
+  postsUnderBlog(blogId: $blogId, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      blog {
+        id
+        name
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
 export const getBlog = `query GetBlog($id: ID!) {
   getBlog(id: $id) {
     id

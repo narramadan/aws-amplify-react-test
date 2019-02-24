@@ -18,7 +18,8 @@ class App extends Component {
   createBlogMutation = async() => {
     console.log('Creating Blog');
     const CreateBlogInput = {
-      name: 'Blog-'+uuid4()
+      name: 'Blog-'+uuid4(),
+      category: 'Technology'
     };
 
     const newEvent = await API.graphql(graphqlOperation(createBlog, {
