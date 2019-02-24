@@ -12,6 +12,7 @@ export const createBlog = `mutation CreateBlog($input: CreateBlogInput!) {
       }
       nextToken
     }
+    category
   }
 }
 `;
@@ -26,6 +27,7 @@ export const updateBlog = `mutation UpdateBlog($input: UpdateBlogInput!) {
       }
       nextToken
     }
+    category
   }
 }
 `;
@@ -40,6 +42,7 @@ export const deleteBlog = `mutation DeleteBlog($input: DeleteBlogInput!) {
       }
       nextToken
     }
+    category
   }
 }
 `;
@@ -53,6 +56,7 @@ export const createPost = `mutation CreatePost($input: CreatePostInput!) {
       posts {
         nextToken
       }
+      category
     }
     comments {
       items {
@@ -74,6 +78,7 @@ export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
       posts {
         nextToken
       }
+      category
     }
     comments {
       items {
@@ -95,6 +100,7 @@ export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
       posts {
         nextToken
       }
+      category
     }
     comments {
       items {

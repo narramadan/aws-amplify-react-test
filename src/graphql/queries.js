@@ -43,6 +43,7 @@ export const getBlog = `query GetBlog($id: ID!) {
       }
       nextToken
     }
+    category
   }
 }
 `;
@@ -58,6 +59,7 @@ export const listBlogs = `query ListBlogs(
       posts {
         nextToken
       }
+      category
     }
     nextToken
   }
@@ -73,6 +75,7 @@ export const getPost = `query GetPost($id: ID!) {
       posts {
         nextToken
       }
+      category
     }
     comments {
       items {

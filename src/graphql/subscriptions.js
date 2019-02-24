@@ -12,6 +12,7 @@ export const onCreateBlog = `subscription OnCreateBlog {
       }
       nextToken
     }
+    category
   }
 }
 `;
@@ -26,6 +27,7 @@ export const onUpdateBlog = `subscription OnUpdateBlog {
       }
       nextToken
     }
+    category
   }
 }
 `;
@@ -40,6 +42,7 @@ export const onDeleteBlog = `subscription OnDeleteBlog {
       }
       nextToken
     }
+    category
   }
 }
 `;
@@ -53,6 +56,7 @@ export const onCreatePost = `subscription OnCreatePost {
       posts {
         nextToken
       }
+      category
     }
     comments {
       items {
@@ -74,6 +78,7 @@ export const onUpdatePost = `subscription OnUpdatePost {
       posts {
         nextToken
       }
+      category
     }
     comments {
       items {
@@ -95,6 +100,7 @@ export const onDeletePost = `subscription OnDeletePost {
       posts {
         nextToken
       }
+      category
     }
     comments {
       items {

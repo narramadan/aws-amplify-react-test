@@ -2,7 +2,7 @@ type Blog @model {
   id: ID!
   name: String!
   posts: [Post] @connection(name: "BlogPosts")
-  #category: Category!
+  category: Category!
 }
 type Post @model {
   id: ID!
@@ -16,12 +16,12 @@ type Comment @model {
   post: Post @connection(name: "PostComments")
 }
 
-#enum Category {
-#  Technology
-#  Science
-#  Politics
-#  Books
-#}
+enum Category {
+  Technology
+  Science
+  Politics
+  Books
+}
 
 type Posts {
   items: [Post]
