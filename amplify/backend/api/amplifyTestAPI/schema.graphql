@@ -2,7 +2,7 @@ type Blog @model {
   id: ID!
   name: String!
   posts: [Post] @connection(name: "BlogPosts")
-  category: Category!
+  category: Category
 }
 type Post @model {
   id: ID!

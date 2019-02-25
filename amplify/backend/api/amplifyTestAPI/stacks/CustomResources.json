@@ -55,7 +55,7 @@
 			   },
 			   "ResponseMappingTemplateS3Location":{  
 				  "Fn::Sub":[  
-					 "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/Query.postsUnderBlog.res.vtl",
+					 "s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/common-response.res.vtl",
 					 {  
 						"S3DeploymentBucket":{  
 						   "Ref":"S3DeploymentBucket"
@@ -92,7 +92,7 @@
 				},
 				"ResponseMappingTemplateS3Location": {
 					"Fn::Sub": [
-						"s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/Query.commentsUnderPost.res.vtl",
+						"s3://${S3DeploymentBucket}/${S3DeploymentRootKey}/resolvers/common-response.res.vtl",
 						{
 							"S3DeploymentBucket": {
 								"Ref": "S3DeploymentBucket"
@@ -104,7 +104,7 @@
 					]
 				}
 			}
-		}
+		}		
 	},
 	"Conditions": {
 		"HasEnvironmentParameter": {

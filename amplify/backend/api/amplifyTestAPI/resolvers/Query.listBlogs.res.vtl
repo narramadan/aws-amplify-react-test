@@ -1,0 +1,13 @@
+#**
+Overriding default resolver for listblogs
+* When Category is null, set default to Books
+*#
+#if ( ! $ctx.result.items)
+    $util.toJson([])
+#else
+    #foreach($blog in $ctx.result.items)
+        ## If category is null, set default to Books
+        #set($blog['category'] = $util.defaultIfNull($blog.category, "Books"))
+    #end
+    $util.toJson($ctx.result)
+#end
